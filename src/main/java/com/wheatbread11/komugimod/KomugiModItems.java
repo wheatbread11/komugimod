@@ -9,7 +9,9 @@ public class KomugiModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModMeta.ID);
 
     public static final DeferredItem<Item> KOMUGI = ITEMS.registerSimpleItem("komugi");
-    public static final DeferredItem<Item> KOMUGI_BREAD = ITEMS.registerSimpleItem("komugi_bread");
+    public static final DeferredItem<Item> KOMUGI_BREAD = ITEMS.register("komugi_bread",
+        () -> new Item(new Item.Properties().food(KomugiModFoodProperties.KOMUGI_BREAD))
+    );
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
