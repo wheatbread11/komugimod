@@ -6,7 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class KomugiModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems("komugimod");
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModMeta.ID);
 
     public static DeferredItem<Item> KOMUGI = ITEMS.registerSimpleItem("komugi");
     public static DeferredItem<Item> KOMUGI_BREAD = ITEMS.registerSimpleItem("komugi_bread");
