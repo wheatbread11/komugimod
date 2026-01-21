@@ -8,8 +8,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class KomugiModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModMeta.ID);
 
-    public static DeferredItem<Item> KOMUGI = ITEMS.registerSimpleItem("komugi");
-    public static DeferredItem<Item> KOMUGI_BREAD = ITEMS.registerSimpleItem("komugi_bread");
+    public static final DeferredItem<Item> KOMUGI = ITEMS.registerSimpleItem("komugi");
+    public static final DeferredItem<Item> KOMUGI_BREAD = ITEMS.registerSimpleItem("komugi_bread");
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
