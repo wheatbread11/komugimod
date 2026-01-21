@@ -8,6 +8,7 @@ public class KomugiMod {
     public static final String MODID = ModMeta.ID;
 
     public KomugiMod(IEventBus modEventBus) {
+        KomugiModBlocks.register(modEventBus);
         KomugiModItems.register(modEventBus);
     }
 }
