@@ -5,6 +5,6 @@ import net.minecraft.world.food.FoodProperties;
 public class KomugiModFoods {
     public static final FoodProperties KOMUGI_BREAD = new FoodProperties.Builder()
         .nutrition(5)
-        .saturationModifier(1.2f)
+        .saturationModifier(0.8f)
         .build();
 }
