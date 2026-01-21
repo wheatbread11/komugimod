@@ -16,7 +16,7 @@ public class KomugiModBlocks {
         () -> new HayBlock(BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_ORANGE)
             .instrument(NoteBlockInstrument.BANJO)
-            .strength(0.5F)
+            .strength(0.6F)
             .sound(SoundType.GRASS))
     );
 
