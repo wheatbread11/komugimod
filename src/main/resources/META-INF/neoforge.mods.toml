@@ -3,7 +3,7 @@ loaderVersion="[1,)"
 license="All Rights Reserved"
 
 [[mods]]
-modId="examplemod"
-version="1.0.0"
-displayName="Example Mod"
+modId="komugimod"
+version="alpha-1.0"
+displayName="Komugi Mod"
 description=''''''
