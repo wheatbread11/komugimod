@@ -8,6 +8,6 @@ public class KomugiMod {
     public static final String MODID = "komugimod";
 
     public KomugiMod(IEventBus modEventBus) {
-        
+        KomugiModItems.register(modEventBus);
     }
 }
