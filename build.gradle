@@ -24,4 +24,10 @@ neoForge {
         minecraftVersion = '1.21.1'
         mappingsVersion = '2024.11.17'
     }
+
+    mods {
+        "komugimod" {
+            sourceSet(sourceSets.main)
+        }
+    }
 }
