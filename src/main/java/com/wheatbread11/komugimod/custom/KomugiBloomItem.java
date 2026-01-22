@@ -49,8 +49,8 @@ public class KomugiBloomItem extends Item {
                     1.2F,
                     false,
                     Level.ExplosionInteraction.TRIGGER,
-                    ParticleTypes.GUST_EMITTER_SMALL,
-                    ParticleTypes.GUST_EMITTER_LARGE,
+                    ParticleTypes.EXPLOSION,
+                    ParticleTypes.EXPLOSION_EMITTER,
                     SoundEvents.WIND_CHARGE_BURST
                 );
         }
