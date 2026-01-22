@@ -1,8 +1,7 @@
-package com.wheatbread11.komugimod.item;
+package com.wheatbread11.komugimod.common;
 
 import com.wheatbread11.komugimod.ModMeta;
-import com.wheatbread11.komugimod.block.KomugiModBlocks;
-import com.wheatbread11.komugimod.item.custom.KomugiBloomItem;
+import com.wheatbread11.komugimod.custom.KomugiBloomItem;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

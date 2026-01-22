@@ -1,4 +1,4 @@
-package com.wheatbread11.komugimod.block;
+package com.wheatbread11.komugimod.common;
 
 import com.wheatbread11.komugimod.ModMeta;
 
