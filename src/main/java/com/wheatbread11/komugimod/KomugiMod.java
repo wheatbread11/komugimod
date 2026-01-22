@@ -1,6 +1,7 @@
 package com.wheatbread11.komugimod;
 
 import com.wheatbread11.komugimod.common.KomugiModBlocks;
+import com.wheatbread11.komugimod.common.KomugiModCreativeModeTab;
 import com.wheatbread11.komugimod.common.KomugiModItems;
 
 import net.neoforged.bus.api.IEventBus;
@@ -13,5 +14,6 @@ public class KomugiMod {
     public KomugiMod(IEventBus modEventBus) {
         KomugiModBlocks.register(modEventBus);
         KomugiModItems.register(modEventBus);
+        KomugiModCreativeModeTab.register(modEventBus);
     }
 }

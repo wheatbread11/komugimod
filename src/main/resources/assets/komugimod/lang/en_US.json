@@ -3,5 +3,7 @@
     
     "item.komugimod.komugi": "Komugi",
     "item.komugimod.komugi_bread": "Komugi Bread",
-    "item.komugimod.komugi_bloom": "Komugi Bloom"
+    "item.komugimod.komugi_bloom": "Komugi Bloom",
+    
+    "itemGroup.komugimod.komugimod": "Komugi Mod"
 }
