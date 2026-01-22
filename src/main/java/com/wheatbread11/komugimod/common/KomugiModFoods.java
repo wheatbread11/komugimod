@@ -1,4 +1,4 @@
-package com.wheatbread11.komugimod;
+package com.wheatbread11.komugimod.common;
 
 import net.minecraft.world.food.FoodProperties;
 

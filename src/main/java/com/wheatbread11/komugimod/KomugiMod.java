@@ -1,5 +1,8 @@
 package com.wheatbread11.komugimod;
 
+import com.wheatbread11.komugimod.common.KomugiModBlocks;
+import com.wheatbread11.komugimod.common.KomugiModItems;
+
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 

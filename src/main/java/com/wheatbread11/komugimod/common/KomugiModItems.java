@@ -1,4 +1,6 @@
-package com.wheatbread11.komugimod;
+package com.wheatbread11.komugimod.common;
+
+import com.wheatbread11.komugimod.ModMeta;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

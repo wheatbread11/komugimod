@@ -1,4 +1,6 @@
-package com.wheatbread11.komugimod;
+package com.wheatbread11.komugimod.common;
+
+import com.wheatbread11.komugimod.ModMeta;
 
 import net.minecraft.world.level.block.HayBlock;
 import net.minecraft.world.level.block.SoundType;
