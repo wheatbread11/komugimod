@@ -21,7 +21,7 @@ public class Items {
     );
     public static final DeferredItem<Item> KOMUGI_BLOOM = ITEMS.register("komugi_bloom",
         () -> new KomugiBloomItem(new Item.Properties()
-            .durability(64))
+            .durability(512))
     );
 
     public static void register(IEventBus modEventBus) {
