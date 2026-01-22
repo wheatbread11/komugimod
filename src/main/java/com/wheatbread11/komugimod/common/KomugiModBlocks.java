@@ -11,7 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class Blocks {
+public class KomugiModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModMeta.ID);
 
     public static final DeferredBlock<HayBlock> KOMUGI_HAY_BLOCK = BLOCKS.register("komugi_hay_block",
