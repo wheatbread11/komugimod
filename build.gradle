@@ -2,6 +2,9 @@ plugins {
     id 'net.neoforged.moddev' version '2.0.139'
 }
 
+version = "0.1.0-alpha"
+group = "com.wheatbread11.komugimod"
+
 neoForge {
     version = '21.1.218'
 
