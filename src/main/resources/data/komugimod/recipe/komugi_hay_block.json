@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "building",
+    "ingredients": [
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" },
+        { "item": "komugimod:komugi" }
+    ],
+    "result": {
+        "count": 1,
+        "id": "komugimod:komugi_hay_block"
+    }
+}

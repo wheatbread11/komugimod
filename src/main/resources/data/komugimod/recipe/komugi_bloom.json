@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "pattern": [
+        " kk",
+        " sk",
+        "s  "
+    ],
+    "key": {
+        "k": { "item": "komugimod:komugi" },
+        "s": { "item": "minecraft:stick" }
+    },
+    "result": {
+        "count": 1,
+        "id": "komugimod:komugi_bloom"
+    }
+}
