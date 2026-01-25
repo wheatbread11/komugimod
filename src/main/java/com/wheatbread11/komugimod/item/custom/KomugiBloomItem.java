@@ -1,4 +1,4 @@
-package com.wheatbread11.komugimod.custom;
+package com.wheatbread11.komugimod.item.custom;
 
 import java.util.Optional;
 import java.util.function.Function;

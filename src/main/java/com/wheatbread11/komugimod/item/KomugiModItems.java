@@ -1,7 +1,8 @@
-package com.wheatbread11.komugimod.common;
+package com.wheatbread11.komugimod.item;
 
 import com.wheatbread11.komugimod.ModMeta;
-import com.wheatbread11.komugimod.custom.KomugiBloomItem;
+import com.wheatbread11.komugimod.block.KomugiModBlocks;
+import com.wheatbread11.komugimod.item.custom.KomugiBloomItem;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -17,7 +18,7 @@ public class KomugiModItems {
     public static final DeferredItem<Item> KOMUGI = ITEMS.registerSimpleItem("komugi");
     public static final DeferredItem<Item> KOMUGI_BREAD = ITEMS.register("komugi_bread",
         () -> new Item(new Item.Properties()
-            .food(KomugiModFoods.KOMUGI_BREAD))
+            .food(KomugiModFoodProperties.KOMUGI_BREAD))
     );
     public static final DeferredItem<Item> KOMUGI_BLOOM = ITEMS.register("komugi_bloom",
         () -> new KomugiBloomItem(new Item.Properties()
@@ -26,5 +27,6 @@ public class KomugiModItems {
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
+        KomugiModCreativeModeTab.register(modEventBus);
     }
 }

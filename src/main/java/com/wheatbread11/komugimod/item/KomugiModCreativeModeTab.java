@@ -1,4 +1,4 @@
-package com.wheatbread11.komugimod.common;
+package com.wheatbread11.komugimod.item;
 
 import java.util.function.Supplier;
 
