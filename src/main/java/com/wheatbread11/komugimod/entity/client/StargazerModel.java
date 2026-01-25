@@ -10,6 +10,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 
 public class StargazerModel<T extends StargazerEntity> extends HierarchicalModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(ModMeta.ID, "stargazer"), "main");
@@ -113,6 +114,9 @@ public class StargazerModel<T extends StargazerEntity> extends HierarchicalModel
 	@Override
 	public void setupAnim(StargazerEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
+
+        this.animateWalk(StargazerAnimations.RUNNING, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.animate(entity.idleAnimationState, StargazerAnimations.IDLE, ageInTicks, 1f);
 	}
 
 	@Override
