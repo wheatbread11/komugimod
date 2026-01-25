@@ -11,7 +11,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class KomugiModEntities {
+public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, ModMeta.ID);
 
     public static final Supplier<EntityType<StargazerEntity>> STARGAZER = ENTITY_TYPES.register("stargazer",
