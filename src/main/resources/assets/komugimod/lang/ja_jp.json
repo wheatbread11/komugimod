@@ -3,5 +3,8 @@
 
     "item.komugimod.komugi": "コムギ",
     "item.komugimod.komugi_bread": "コムギのパン",
-    "item.komugimod.komugi_bloom": "コムギの箒"
+    "item.komugimod.komugi_bloom": "コムギの箒",
+    "item.komugimod.stargazer_spawn_egg": "スターゲイザーのスポーンエッグ",
+
+    "entity.komugimod.stargazer": "スターゲイザー"
 }

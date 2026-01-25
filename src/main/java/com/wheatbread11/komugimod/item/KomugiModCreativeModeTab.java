@@ -22,6 +22,7 @@ public class KomugiModCreativeModeTab {
                 output.accept(KomugiModItems.KOMUGI_HAY_BLOCK.get());
                 output.accept(KomugiModItems.KOMUGI_BREAD.get());
                 output.accept(KomugiModItems.KOMUGI_BLOOM.get());
+                output.accept(KomugiModItems.STARGAZER_SPAWN_EGG.get());
             })
             .build()
     );
