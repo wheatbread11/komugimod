@@ -80,18 +80,20 @@ public class StargazerEntity extends Monster{
 
     @Override
     public void tick() {
-        super.tick();
-
-        if(this.level().isClientSide()) {
+        if (this.level().isClientSide()) {
             this.setupAnimationStates();
         } else {
-            if(this.isOnFire()) {
-                this.explode();
-            }
-            if(this.level().hasNearbyAlivePlayer(this.getX(), this.getY(), this.getZ(), BLAST_DISTANCE)) {
-                this.explode();
+            if (this.isAlive()) {
+                if (this.isOnFire()) {
+                    this.explode();
+                }
+                if (this.level().hasNearbyAlivePlayer(this.getX(), this.getY(), this.getZ(), BLAST_DISTANCE)) {
+                    this.explode();
+                }
             }
         }
+
+        super.tick();
     }
     
     @Override
