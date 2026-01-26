@@ -8,7 +8,7 @@
     ],
     "key": {
         "k": { "item": "komugimod:komugi" },
-        "s": { "item": "minecraft:stick" }
+        "s": { "item": "minecraft:breeze_rod" }
     },
     "result": {
         "count": 1,
