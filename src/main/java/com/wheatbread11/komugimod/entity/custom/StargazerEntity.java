@@ -5,9 +5,14 @@ import java.util.function.Function;
 
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.AnimationState;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -21,17 +26,19 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.SimpleExplosionDamageCalculator;
 
 public class StargazerEntity extends Monster{
-    private static final float BLAST_DIST = 1.2f;
-    private static final float BLAST_RADIUS = 1.0f;
-    private static final float BLAST_KNOCKBACK = 1.2f;
+    private static final float BLAST_DISTANCE = 1.2f;
+    private static final float BLAST_RADIUS = 1.2f;
+    private static final float BLAST_KNOCKBACK = 2.4f;
     private static final ExplosionDamageCalculator EXPLOSION_DAMAGE_CALCULATOR = new SimpleExplosionDamageCalculator(
         true,
-        false,
+        true,
         Optional.of(BLAST_KNOCKBACK),
         BuiltInRegistries.BLOCK.getTag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())
     );
@@ -79,29 +86,58 @@ public class StargazerEntity extends Monster{
             this.setupAnimationStates();
         } else {
             if(this.isOnFire()) {
-                explode();
+                this.explode();
             }
-            if(this.level().hasNearbyAlivePlayer(this.getX(), this.getY(), this.getZ(), BLAST_DIST)) {
-                explode();
+            if(this.level().hasNearbyAlivePlayer(this.getX(), this.getY(), this.getZ(), BLAST_DISTANCE)) {
+                this.explode();
             }
+        }
+    }
+    
+    @Override
+    protected InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        if (itemstack.is(ItemTags.CREEPER_IGNITERS)) {
+            SoundEvent soundevent = itemstack.is(Items.FIRE_CHARGE) ? SoundEvents.FIRECHARGE_USE : SoundEvents.FLINTANDSTEEL_USE;
+            this.level()
+                .playSound(
+                    player,
+                    this.getX(),
+                    this.getY(),
+                    this.getZ(),
+                    soundevent,
+                    this.getSoundSource(),
+                    1.0F,
+                    this.random.nextFloat() * 0.4F + 0.8F
+                );
+            if (!this.level().isClientSide) {
+                this.explode();
+            }
+
+            return InteractionResult.sidedSuccess(this.level().isClientSide);
+        } else {
+            return super.mobInteract(player, hand);
         }
     }
 
     private void explode() {
-        this.kill();
-        this.level().explode(
-            this,
-            null,
-            EXPLOSION_DAMAGE_CALCULATOR,
-            this.getX(),
-            this.getY(),
-            this.getZ(),
-            BLAST_RADIUS,
-            true,
-            Level.ExplosionInteraction.TRIGGER,
-            ParticleTypes.EXPLOSION,
-            ParticleTypes.EXPLOSION_EMITTER,
-            SoundEvents.GENERIC_EXPLODE
-        );
+        this.dead = true;
+        this.level()
+            .explode(
+                this,
+                null,
+                EXPLOSION_DAMAGE_CALCULATOR,
+                this.getX(),
+                this.getY(),
+                this.getZ(),
+                BLAST_RADIUS,
+                true,
+                Level.ExplosionInteraction.NONE,
+                ParticleTypes.EXPLOSION,
+                ParticleTypes.EXPLOSION_EMITTER,
+                SoundEvents.GENERIC_EXPLODE
+            );
+        this.triggerOnDeathMobEffects(Entity.RemovalReason.KILLED);
+        this.discard();
     }
 }
