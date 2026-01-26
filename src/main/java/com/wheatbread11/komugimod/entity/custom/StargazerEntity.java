@@ -33,6 +33,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.SimpleExplosionDamageCalculator;
 
 public class StargazerEntity extends Monster{
+    private static final int SPAWN_PROTECTION_DURATION = 20;
     private static final float BLAST_DISTANCE = 1.2f;
     private static final float BLAST_RADIUS = 1.2f;
     private static final float BLAST_KNOCKBACK = 2.4f;
@@ -44,7 +45,8 @@ public class StargazerEntity extends Monster{
     );
 
     public final AnimationState idleAnimationState = new AnimationState();
-    private int idleAnimationTimeout = 0;
+    
+    private int spawnProtection = SPAWN_PROTECTION_DURATION;
 
     public StargazerEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
@@ -69,21 +71,14 @@ public class StargazerEntity extends Monster{
             .add(Attributes.ATTACK_DAMAGE, 0.0);
     }
 
-    private void setupAnimationStates() {
-        if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 80;
-            this.idleAnimationState.start(this.tickCount);
-        } else {
-            --this.idleAnimationTimeout;
-        }
-    }
-
     @Override
     public void tick() {
-        if (this.level().isClientSide()) {
-            this.setupAnimationStates();
-        } else {
-            if (this.isAlive()) {
+        if (!this.level().isClientSide()) {
+            if (spawnProtection > 0) {
+                spawnProtection--;
+            }
+
+            if (this.isAlive() && spawnProtection <= 0) {
                 if (this.isOnFire()) {
                     this.explode();
                 }
