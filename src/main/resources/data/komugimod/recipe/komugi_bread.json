@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "kkk"
+    ],
+    "key": {
+        "k": { "item": "komugimod:komugi" }
+    },
+    "result": {
+        "count": 1,
+        "id": "komugimod:komugi_bread"
+    }
+}

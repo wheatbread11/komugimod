@@ -1,0 +1,12 @@
+{
+    "block.komugimod.komugi_hay_block": "Komugi Hay Bale",
+    
+    "item.komugimod.komugi": "Komugi",
+    "item.komugimod.komugi_bread": "Komugi Bread",
+    "item.komugimod.komugi_bloom": "Komugi Bloom",
+    "item.komugimod.stargazer_spawn_egg": "Stargazer Spawn Egg",
+    
+    "itemGroup.komugimod.komugimod": "Komugi Mod",
+
+    "entity.komugimod.stargazer": "Stargazer"
+}

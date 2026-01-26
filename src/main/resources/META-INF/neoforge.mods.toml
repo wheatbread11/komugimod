@@ -4,6 +4,8 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="komugimod"
-version="1.0.0"
+version="0.2.2-alpha"
 displayName="Komugi Mod"
-description=''''''
+description='''
+"Komugi" means wheat in Japanese.
+'''

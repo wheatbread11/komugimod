@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "komugimod:block/komugi_hay_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "komugimod:block/komugi_hay_block"
+    },
+    "axis=z": {
+      "model": "komugimod:block/komugi_hay_block_horizontal",
+      "x": 90
+    }
+  }
+}
