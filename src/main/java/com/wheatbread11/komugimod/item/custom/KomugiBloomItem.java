@@ -20,7 +20,10 @@ import net.minecraft.world.phys.Vec3;
 
 public class KomugiBloomItem extends Item {
     private static final ExplosionDamageCalculator EXPLOSION_DAMAGE_CALCULATOR = new SimpleExplosionDamageCalculator(
-        true, false, Optional.of(1.22F), BuiltInRegistries.BLOCK.getTag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())
+        true,
+        false,
+        Optional.of(1.22F),
+        BuiltInRegistries.BLOCK.getTag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())
     );
 
     public KomugiBloomItem(Properties properties) {
