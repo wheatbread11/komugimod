@@ -1,5 +1,12 @@
 package com.wheatbread11.komugimod.entity.custom;
 
+import java.util.Optional;
+import java.util.function.Function;
+
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -14,9 +21,21 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.SimpleExplosionDamageCalculator;
 
 public class StargazerEntity extends Monster{
+    private static final float BLAST_DIST = 1.2f;
+    private static final float BLAST_RADIUS = 1.0f;
+    private static final float BLAST_KNOCKBACK = 1.2f;
+    private static final ExplosionDamageCalculator EXPLOSION_DAMAGE_CALCULATOR = new SimpleExplosionDamageCalculator(
+        true,
+        false,
+        Optional.of(BLAST_KNOCKBACK),
+        BuiltInRegistries.BLOCK.getTag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())
+    );
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -40,7 +59,7 @@ public class StargazerEntity extends Monster{
             .add(Attributes.MAX_HEALTH, 16.0)
             .add(Attributes.MOVEMENT_SPEED, 0.5)
             .add(Attributes.FOLLOW_RANGE, 24.0)
-            .add(Attributes.ATTACK_DAMAGE, 4.0);
+            .add(Attributes.ATTACK_DAMAGE, 0.0);
     }
 
     private void setupAnimationStates() {
@@ -58,6 +77,31 @@ public class StargazerEntity extends Monster{
 
         if(this.level().isClientSide()) {
             this.setupAnimationStates();
+        } else {
+            if(this.isOnFire()) {
+                explode();
+            }
+            if(this.level().hasNearbyAlivePlayer(this.getX(), this.getY(), this.getZ(), BLAST_DIST)) {
+                explode();
+            }
         }
+    }
+
+    private void explode() {
+        this.kill();
+        this.level().explode(
+            this,
+            null,
+            EXPLOSION_DAMAGE_CALCULATOR,
+            this.getX(),
+            this.getY(),
+            this.getZ(),
+            BLAST_RADIUS,
+            true,
+            Level.ExplosionInteraction.TRIGGER,
+            ParticleTypes.EXPLOSION,
+            ParticleTypes.EXPLOSION_EMITTER,
+            SoundEvents.GENERIC_EXPLODE
+        );
     }
 }
