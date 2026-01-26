@@ -115,7 +115,7 @@ public class StargazerModel<T extends StargazerEntity> extends HierarchicalModel
 	public void setupAnim(StargazerEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 
-        this.animateWalk(StargazerAnimations.RUNNING, limbSwing, limbSwingAmount, 2f, 2.5f);
+        this.animateWalk(StargazerAnimations.RUNNING, limbSwing, limbSwingAmount, 1.0f, 1.0f);
         this.animate(entity.idleAnimationState, StargazerAnimations.IDLE, ageInTicks, 1f);
 	}
 

@@ -37,10 +37,10 @@ public class StargazerEntity extends Monster{
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 16.0)
-                .add(Attributes.MOVEMENT_SPEED, 0.25)
-                .add(Attributes.FOLLOW_RANGE, 24.0)
-                .add(Attributes.ATTACK_DAMAGE, 0.0);
+            .add(Attributes.MAX_HEALTH, 16.0)
+            .add(Attributes.MOVEMENT_SPEED, 0.5)
+            .add(Attributes.FOLLOW_RANGE, 24.0)
+            .add(Attributes.ATTACK_DAMAGE, 4.0);
     }
 
     private void setupAnimationStates() {
