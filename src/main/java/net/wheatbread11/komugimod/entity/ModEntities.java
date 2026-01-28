@@ -1,15 +1,14 @@
-package com.wheatbread11.komugimod.entity;
+package net.wheatbread11.komugimod.entity;
 
 import java.util.function.Supplier;
-
-import com.wheatbread11.komugimod.ModMeta;
-import com.wheatbread11.komugimod.entity.custom.StargazerEntity;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.wheatbread11.komugimod.ModMeta;
+import net.wheatbread11.komugimod.entity.custom.StargazerEntity;
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, ModMeta.ID);

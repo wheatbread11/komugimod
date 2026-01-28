@@ -1,9 +1,4 @@
-package com.wheatbread11.komugimod;
-
-import com.wheatbread11.komugimod.block.ModBlocks;
-import com.wheatbread11.komugimod.entity.ModEntities;
-import com.wheatbread11.komugimod.entity.client.StargazerRenderer;
-import com.wheatbread11.komugimod.item.ModItems;
+package net.wheatbread11.komugimod;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.neoforged.bus.api.IEventBus;
@@ -11,6 +6,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.wheatbread11.komugimod.block.ModBlocks;
+import net.wheatbread11.komugimod.entity.ModEntities;
+import net.wheatbread11.komugimod.entity.client.StargazerRenderer;
+import net.wheatbread11.komugimod.item.ModItems;
 
 @Mod(ModMeta.ID)
 public class KomugiMod {

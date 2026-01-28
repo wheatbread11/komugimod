@@ -1,4 +1,4 @@
-package com.wheatbread11.komugimod.entity.custom;
+package net.wheatbread11.komugimod.entity.custom;
 
 import java.util.Optional;
 import java.util.function.Function;

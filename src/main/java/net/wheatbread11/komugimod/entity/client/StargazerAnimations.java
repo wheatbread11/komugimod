@@ -1,4 +1,4 @@
-package com.wheatbread11.komugimod.entity.client;
+package net.wheatbread11.komugimod.entity.client;
 
 import net.minecraft.client.animation.AnimationChannel;
 import net.minecraft.client.animation.AnimationDefinition;
