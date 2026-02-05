@@ -1,8 +1,8 @@
-package net.wheatbread11.komugimod.entity.client;
+package net.wheatbread11.komugimod.neoforge.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.wheatbread11.komugimod.ModMeta;
-import net.wheatbread11.komugimod.entity.custom.StargazerEntity;
+import net.wheatbread11.komugimod.common.ModMeta;
+import net.wheatbread11.komugimod.neoforge.entity.StargazerEntity;
 
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

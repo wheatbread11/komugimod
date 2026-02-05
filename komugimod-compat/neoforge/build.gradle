@@ -15,6 +15,14 @@ dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDir project(":komugimod-common").sourceSets.main.resources.srcDirs
+        }
+    }
+}
+
 tasks.withType(ProcessResources).configureEach {
     var replaceProperties = [
             mod_id                 : mod_id,

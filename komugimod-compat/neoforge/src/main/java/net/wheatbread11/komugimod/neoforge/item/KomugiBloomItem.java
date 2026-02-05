@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.item.custom;
+package net.wheatbread11.komugimod.neoforge.item;
 
 import java.util.Optional;
 import java.util.function.Function;
@@ -36,11 +36,11 @@ public class KomugiBloomItem extends Item {
 
         if (!isClient) {
             stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
-            
+
             var pos = new Vec3(
-              (player.position().x + target.position().x) / 2,   
-              (player.position().y + target.position().y) / 2,   
-              (player.position().z + target.position().z) / 2   
+              (player.position().x + target.position().x) / 2,
+              (player.position().y + target.position().y) / 2,
+              (player.position().z + target.position().z) / 2
             );
             player.level().explode(
                     player,

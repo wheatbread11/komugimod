@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.block;
+package net.wheatbread11.komugimod.neoforge.block;
 
 import net.minecraft.world.level.block.HayBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -8,7 +8,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.ModMeta;
+import net.wheatbread11.komugimod.common.ModMeta;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModMeta.ID);

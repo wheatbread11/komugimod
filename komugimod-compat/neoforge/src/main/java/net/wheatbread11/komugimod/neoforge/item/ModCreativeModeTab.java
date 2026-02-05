@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.item;
+package net.wheatbread11.komugimod.neoforge.item;
 
 import java.util.function.Supplier;
 
@@ -8,7 +8,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.ModMeta;
+import net.wheatbread11.komugimod.common.ModMeta;
 
 public class ModCreativeModeTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, ModMeta.ID);

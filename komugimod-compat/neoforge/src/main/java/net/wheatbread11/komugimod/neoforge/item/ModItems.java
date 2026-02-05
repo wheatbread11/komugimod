@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.item;
+package net.wheatbread11.komugimod.neoforge.item;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -6,10 +6,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.ModMeta;
-import net.wheatbread11.komugimod.block.ModBlocks;
-import net.wheatbread11.komugimod.entity.ModEntities;
-import net.wheatbread11.komugimod.item.custom.KomugiBloomItem;
+import net.wheatbread11.komugimod.common.ModMeta;
+import net.wheatbread11.komugimod.neoforge.block.ModBlocks;
+import net.wheatbread11.komugimod.neoforge.entity.ModEntities;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModMeta.ID);

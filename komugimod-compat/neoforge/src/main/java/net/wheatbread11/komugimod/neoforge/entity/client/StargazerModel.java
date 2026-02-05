@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.entity.client;
+package net.wheatbread11.komugimod.neoforge.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -8,8 +8,8 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
-import net.wheatbread11.komugimod.ModMeta;
-import net.wheatbread11.komugimod.entity.custom.StargazerEntity;
+import net.wheatbread11.komugimod.common.ModMeta;
+import net.wheatbread11.komugimod.neoforge.entity.StargazerEntity;
 
 public class StargazerModel<T extends StargazerEntity> extends HierarchicalModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(ModMeta.ID, "stargazer"), "main");
