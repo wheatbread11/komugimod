@@ -1,8 +1,12 @@
 # Gradle
 .gradle
 build
+run
 
 # IDE
 .idea
 .eclipse
 .vscode
+
+# NeoForge
+runs
