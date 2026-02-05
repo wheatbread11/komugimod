@@ -5,9 +5,9 @@ plugins {
 java.toolchain.languageVersion = JavaLanguageVersion.of(minecraft_java.toInteger())
 
 group = mod_group
-version = "${mod_version_general}-${mod_version_neoforge}"
+version = "${mod_version_general}-neoforge"
 tasks.named('jar') {
-    archiveBaseName.set("${mod_id}-neoforge")
+    archiveBaseName.set("${mod_id}")
 }
 
 dependencies {
