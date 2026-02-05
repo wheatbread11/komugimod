@@ -2,16 +2,27 @@ plugins {
     id 'net.neoforged.gradle.userdev' version '7.1.20'
 }
 
-group = project.group
-version = "${project.version}-neoforge"
+java.toolchain.languageVersion = JavaLanguageVersion.of(minecraft_java.toInteger())
+
+version = "${mod_version_general}-${mod_version_neoforge}"
+tasks.named('jar') {
+    archiveBaseName.set("${mod_id}-neoforge")
+}
 
 dependencies {
     implementation project(':komugimod-common')
-    implementation 'net.neoforged:neoforge:21.1.218'
+    implementation "net.neoforged:neoforge:${neoforge_version}"
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            mod_id                 : mod_id,
+            mod_version            : mod_version_general,
+            mod_name               : mod_name,
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
     }
 }
