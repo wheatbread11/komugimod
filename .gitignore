@@ -1,10 +1,12 @@
+# Gradle
+.gradle
+build
+run
+
 # IDE
 .idea
+.eclipse
 .vscode
 
-# gradle
-build
-.gradle
-
-# other
-run
+# NeoForge
+runs

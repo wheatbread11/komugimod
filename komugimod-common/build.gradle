@@ -1,0 +1,6 @@
+plugins {
+    id 'java-library'
+}
+
+group = mod_group
+version = mod_version_general
