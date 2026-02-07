@@ -34,14 +34,14 @@ import net.minecraft.world.level.SimpleExplosionDamageCalculator;
 
 public class StargazerEntity extends Monster{
     private static final int SPAWN_PROTECTION_DURATION = 20;
-    private static final float BLAST_DISTANCE = 1.2f;
-    private static final float BLAST_RADIUS = 1.2f;
-    private static final float BLAST_KNOCKBACK = 2.4f;
+    private static final float BLAST_DISTANCE = 2.4f;
+    private static final float BLAST_RADIUS = 3.6f;
+    private static final float BLAST_KNOCKBACK = 3.6f;
     private static final ExplosionDamageCalculator EXPLOSION_DAMAGE_CALCULATOR = new SimpleExplosionDamageCalculator(
         true,
         true,
         Optional.of(BLAST_KNOCKBACK),
-        BuiltInRegistries.BLOCK.getTag(BlockTags.BLOCKS_WIND_CHARGE_EXPLOSIONS).map(Function.identity())
+        BuiltInRegistries.BLOCK.getTag(BlockTags.AIR).map(Function.identity())
     );
 
     public final AnimationState idleAnimationState = new AnimationState();
@@ -68,7 +68,7 @@ public class StargazerEntity extends Monster{
             .add(Attributes.MAX_HEALTH, 16.0)
             .add(Attributes.MOVEMENT_SPEED, 0.4)
             .add(Attributes.FOLLOW_RANGE, 24.0)
-            .add(Attributes.ATTACK_DAMAGE, 0.0);
+            .add(Attributes.ATTACK_DAMAGE, 2.0);
     }
 
     @Override

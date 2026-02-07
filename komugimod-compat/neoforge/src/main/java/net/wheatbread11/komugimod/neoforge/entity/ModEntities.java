@@ -14,7 +14,7 @@ public class ModEntities {
 
     public static final Supplier<EntityType<StargazerEntity>> STARGAZER = ENTITY_TYPES.register("stargazer",
         () -> EntityType.Builder.of(StargazerEntity::new, MobCategory.MONSTER)
-            .sized(1.0f, 1.0f)
+            .sized(2.0f, 2.0f)
             .build("stargazer")
     );
 
