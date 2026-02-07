@@ -15,6 +15,13 @@ dependencies {
     implementation "net.neoforged:neoforge:${neoforge_version}"
 }
 
+subsystems {
+    parchment {
+        minecraftVersion = minecraft_version
+        mappingsVersion = parchment_version
+    }
+}
+
 sourceSets {
     main {
         resources {
