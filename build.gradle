@@ -1,0 +1,31 @@
+plugins {
+    id 'net.neoforged.moddev' version '2.0.140'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(minecraft_java)
+
+neoForge {
+    version = neoforge_version
+
+    runs {
+        client { client() }
+    }
+
+    mods {
+        project {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            mod_id                 : rootProject.name,
+            mod_version            : version
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
