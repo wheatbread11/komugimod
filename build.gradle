@@ -10,6 +10,12 @@ neoForge {
     runs {
         client { client() }
     }
+
+    mods {
+        project {
+            sourceSet sourceSets.main
+        }
+    }
 }
 
 tasks.withType(ProcessResources).configureEach {
