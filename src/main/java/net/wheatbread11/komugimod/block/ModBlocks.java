@@ -8,10 +8,10 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.common.ModMeta;
+import net.wheatbread11.komugimod.KomugiMod;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ModMeta.ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(KomugiMod.MODID);
 
     public static final DeferredBlock<HayBlock> KOMUGI_HAY_BLOCK = BLOCKS.register("komugi_hay_block",
         () -> new HayBlock(BlockBehaviour.Properties.of()
