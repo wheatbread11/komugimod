@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.neoforge.entity;
+package net.wheatbread11.komugimod.entity;
 
 import java.util.function.Supplier;
 
@@ -7,10 +7,10 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.common.ModMeta;
+import net.wheatbread11.komugimod.KomugiMod;
 
 public class ModEntities {
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, ModMeta.ID);
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, KomugiMod.MODID);
 
     public static final Supplier<EntityType<StargazerEntity>> STARGAZER = ENTITY_TYPES.register("stargazer",
         () -> EntityType.Builder.of(StargazerEntity::new, MobCategory.MONSTER)

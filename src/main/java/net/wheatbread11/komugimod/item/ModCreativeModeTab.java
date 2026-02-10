@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.neoforge.item;
+package net.wheatbread11.komugimod.item;
 
 import java.util.function.Supplier;
 
@@ -8,13 +8,13 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.common.ModMeta;
+import net.wheatbread11.komugimod.KomugiMod;
 
 public class ModCreativeModeTab {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, ModMeta.ID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(BuiltInRegistries.CREATIVE_MODE_TAB, KomugiMod.MODID);
     public static final Supplier<CreativeModeTab> KOMUGIMOD_TAB = CREATIVE_MODE_TABS.register("komugimod",
         () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup." + ModMeta.ID + ".komugimod"))
+            .title(Component.translatable("itemGroup." + KomugiMod.MODID + ".komugimod"))
             .icon(() -> new ItemStack(ModItems.KOMUGI_BREAD.get()))
             .displayItems((params, output) -> {
                 output.accept(ModItems.KOMUGI.get());

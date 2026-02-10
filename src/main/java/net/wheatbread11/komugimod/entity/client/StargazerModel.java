@@ -1,6 +1,6 @@
 // Made with Blockbench 5.0.7
 
-package net.wheatbread11.komugimod.neoforge.entity.client;
+package net.wheatbread11.komugimod.entity.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -10,12 +10,12 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
-import net.wheatbread11.komugimod.common.ModMeta;
-import net.wheatbread11.komugimod.neoforge.entity.StargazerEntity;
+import net.wheatbread11.komugimod.KomugiMod;
+import net.wheatbread11.komugimod.entity.StargazerEntity;
 
 public class StargazerModel<T extends StargazerEntity> extends HierarchicalModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(ModMeta.ID, "stargazer"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(KomugiMod.MODID, "stargazer"), "main");
 
 	private final ModelPart root;
 	private final ModelPart body;

@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.neoforge.entity;
+package net.wheatbread11.komugimod.entity;
 
 import java.util.Optional;
 import java.util.function.Function;

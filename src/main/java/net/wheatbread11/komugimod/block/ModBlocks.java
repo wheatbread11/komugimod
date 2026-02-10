@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.neoforge.block;
+package net.wheatbread11.komugimod.block;
 
 import net.minecraft.world.level.block.HayBlock;
 import net.minecraft.world.level.block.SoundType;

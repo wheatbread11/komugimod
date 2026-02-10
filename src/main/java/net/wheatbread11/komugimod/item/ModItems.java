@@ -1,4 +1,4 @@
-package net.wheatbread11.komugimod.neoforge.item;
+package net.wheatbread11.komugimod.item;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -6,12 +6,12 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.wheatbread11.komugimod.common.ModMeta;
-import net.wheatbread11.komugimod.neoforge.block.ModBlocks;
-import net.wheatbread11.komugimod.neoforge.entity.ModEntities;
+import net.wheatbread11.komugimod.KomugiMod;
+import net.wheatbread11.komugimod.block.ModBlocks;
+import net.wheatbread11.komugimod.entity.ModEntities;
 
 public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ModMeta.ID);
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(KomugiMod.MODID);
 
     public static final DeferredItem<BlockItem> KOMUGI_HAY_BLOCK = ITEMS.registerSimpleBlockItem(ModBlocks.KOMUGI_HAY_BLOCK);
 
