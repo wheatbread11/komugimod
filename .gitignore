@@ -1,12 +1,26 @@
-# Gradle
-.gradle
-build
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-# IDE
+# idea
+out
+*.ipr
+*.iws
+*.iml
 .idea
-.eclipse
-.vscode
 
-# Other
+# gradle
+build
+.gradle
+
+# other
+eclipse
 run
 runs
+run-data
+
+repo
