@@ -25,6 +25,10 @@ public class ModItems {
             .durability(512))
     );
 
+    public static final DeferredItem<BlockItem> STARGAZER_PIE = ITEMS.register("stargazer_pie",
+            () -> new BlockItem(ModBlocks.STARGAZER_PIE.get(), new Item.Properties()
+                    .stacksTo(1))
+    );
     public static final DeferredItem<Item> STARGAZER_SPAWN_EGG = ITEMS.register("stargazer_spawn_egg",
         () -> new DeferredSpawnEggItem(
             ModEntities.STARGAZER,

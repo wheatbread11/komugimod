@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fff",
+    "geg",
+    "kkk"
+  ],
+  "key": {
+    "f": { "item": "minecraft:cooked_cod" },
+    "e": { "item": "minecraft:egg"},
+    "g": { "item": "minecraft:gold_ingot"},
+    "k": { "item": "komugimod:komugi" }
+  },
+  "result": {
+    "count": 1,
+    "id": "komugimod:stargazer_pie"
+  }
+}
