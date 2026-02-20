@@ -42,7 +42,7 @@ public class StargazerPieBlock extends Block {
         if (!player.canEat(false)) {
             return InteractionResult.PASS;
         } else {
-            player.getFoodData().eat(2, 1.0F);
+            player.getFoodData().eat(2, 0.0F);
 
             return InteractionResult.SUCCESS;
         }
