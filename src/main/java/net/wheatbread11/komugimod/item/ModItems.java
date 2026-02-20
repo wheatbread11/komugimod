@@ -1,5 +1,6 @@
 package net.wheatbread11.komugimod.item;
 
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -18,7 +19,11 @@ public class ModItems {
     public static final DeferredItem<Item> KOMUGI = ITEMS.registerSimpleItem("komugi");
     public static final DeferredItem<Item> KOMUGI_BREAD = ITEMS.register("komugi_bread",
         () -> new Item(new Item.Properties()
-            .food(ModFoodProperties.KOMUGI_BREAD))
+            .food(new FoodProperties.Builder()
+                    .nutrition(5)
+                    .saturationModifier(0.8f)
+                    .build()
+            ))
     );
     public static final DeferredItem<Item> KOMUGI_BLOOM = ITEMS.register("komugi_bloom",
         () -> new KomugiBloomItem(new Item.Properties()
